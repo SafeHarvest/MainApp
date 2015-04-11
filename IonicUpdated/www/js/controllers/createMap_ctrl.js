@@ -1,7 +1,6 @@
-angular.module('map.controllers', [])
-.controller("mapsCtrl", [ "$scope",'$http','dataService', function($scope,$http,dataService) {
+angular.module('createmap.controllers', [])
+.controller("CreateMapCtrl", [ "$scope",'$http','dataService', function($scope,$http,dataService) {
 
-	
     angular.extend($scope, {
         center: {
             lat: 38.857,

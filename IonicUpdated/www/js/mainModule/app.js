@@ -7,10 +7,12 @@
 var app = angular.module('starter', ['ionic', 
 'leaflet-directive',
 'ui.router',
-/*'starter.controllers',*/
-'map.controllers',
 'signin.controllers',
 'app.controllers',
+'createmap.controllers',
+'createissue.controllers',
+'profile.controllers',
+'reports.controllers',
 'data.service'
 ])
 
@@ -31,12 +33,7 @@ var app = angular.module('starter', ['ionic',
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 	
- /* .state('app', {
-   url: "/app",
-	  abstract: true,
-    templateUrl: "templates/sign-in.html",
-    controller: 'SignInCtrl'
-  })*/
+ //note let's add teh controlers for the Menucontent via ng-controller
 	 .state('app', {
 	     url: "/app",
 	     abstract: true,
@@ -49,33 +46,63 @@ var app = angular.module('starter', ['ionic',
 	      controller: 'SignInCtrl'
 	    })
    	 .state('app.menu', {
-   	     url: "/app",
+   	     url: "/menu",
    	     templateUrl: "templates/menu.html",
 		 controller:'AppCtrl'
    	   })
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
-  .state('app.map2', {
-    url: "/map2",
-    templateUrl: "templates/map.html"
-      
-  })
-  .state('app.map', {
-    url: "/map",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/map.html"
-      }
-    }
-  })
+	   
+	   //note let's add teh controlers for the Menucontent via ng-controller
+     	 .state('app.profile', {
+     	     url: "/profile",
+		     views: {
+		       'menuContent': {
+     	     	  	templateUrl: "templates/profile.html",
+		       },
+			   controller:'ProfileCtrl'
+		     }
+     	     
+     	   })
+       	 .state('app.createissue', {
+       	     url: "/createissue",
+  		     views: {
+  		       'menuContent': {
+       	     	  	templateUrl: "templates/createIssue.html",
+  		       },
+  			   controller:'CreateIssueCtrl'
+  		     }
+     	     
+       	   })
+         	 .state('app.createmap', {
+         	     url: "/createmap",
+    		     views: {
+    		       'menuContent': {
+         	     	  	templateUrl: "templates/createMap.html",
+    		       }
+    		     }
+     	     
+         	   })
+           	 .state('app.searchmap', {
+           	     url: "/searchmap",
+      		     views: {
+      		       'menuContent': {
+           	     	  	templateUrl: "templates/searchMap.html",
+      		       }
+				  
+      		     }
+     	     
+           	   })
+			   .state('app.reports', {
+         	     url: "/reports",
+    		     views: {
+    		       'menuContent': {
+         	     	  	templateUrl: "templates/reports.html",
+    		       }
+    		     }
+   	     
+         	   });
+ 
   
-    .state('app.playlists', {
+    /*.state('app.playlists', {
       url: "/playlists",
       views: {
         'menuContent': {
@@ -93,8 +120,8 @@ var app = angular.module('starter', ['ionic',
         controller: 'PlaylistCtrl'
       }
     }
-  })
-   ;
+  })*/
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('sign-in');
 });
