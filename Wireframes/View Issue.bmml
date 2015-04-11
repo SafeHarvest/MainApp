@@ -1,0 +1,100 @@
+<mockup version="1.0" skin="sketch" measuredW="1143" measuredH="1258" mockupW="1024" mockupH="1230">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="119" y="28" w="1024" h="1230" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>roundedSolid</borderStyle>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="142" y="51" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ListIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="236" y="60" w="176" h="30" measuredW="150" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Issue%20Types%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::FieldSet" x="142" y="130" w="525" h="710" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>View%20Issue</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Image" x="157" y="145" w="495" h="121" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="166" y="283" w="-1" h="-1" measuredW="40" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Issue</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextArea" x="283" y="317" w="364" h="71" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20text%0AA%20second%20line%20of%20text</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextArea" x="283" y="489" w="365" h="71" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20text%0AA%20second%20line%20of%20text</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="198" y="317" w="-1" h="-1" measuredW="76" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Description</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="157" y="443" w="-1" h="-1" measuredW="117" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Destructive%20Stage</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="198" y="489" w="-1" h="-1" measuredW="72" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Symptoms</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::TextArea" x="283" y="575" w="365" h="71" measuredW="200" measuredH="140" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20text%0AA%20second%20line%20of%20text</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="188" y="575" w="-1" h="-1" measuredW="84" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>How%20to%20Care</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Button" x="581" y="680" w="-1" h="-1" measuredW="66" measuredH="28" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Button" x="454" y="680" w="-1" h="-1" measuredW="56" measuredH="28" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Button" x="515" y="680" w="-1" h="-1" measuredW="61" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Clone</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::ComboBox" x="286" y="443" w="153" h="-1" measuredW="100" measuredH="23" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ComboBox</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Label" x="198" y="401" w="117" h="21" measuredW="72" measuredH="21" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Crop%20Type</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::ComboBox" x="283" y="401" w="156" h="-1" measuredW="100" measuredH="23" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ComboBox</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

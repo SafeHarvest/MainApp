@@ -1,0 +1,14 @@
+<mockup version="1.0" skin="sketch" measuredW="849" measuredH="232" mockupW="707" mockupH="213">
+  <controls>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="142" y="19" w="707" h="-1" measuredW="215" measuredH="213" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MENU%0A+%20Bug%20Search%201%0A+%20Bug%20Search%202%0A+%20Bug%20Search%204%0A+%20Bug%20Search%20abc%0A%20%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::StickyNote" x="658" y="32" w="151" h="133" measuredW="109" measuredH="123" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Clicking%20on%20any%20of%20these%20will%20take%20us%20to%20the%20search%20page%20Populated%20with%20the%20needed%20data.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
