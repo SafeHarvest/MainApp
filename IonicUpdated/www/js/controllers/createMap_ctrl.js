@@ -1,8 +1,7 @@
 angular.module('createmap.controllers', [])
 .controller("CreateMapCtrl", [ "$scope",'$http','dataService', 'leafletData', function($scope,$http,dataService, leafletData) {
 
-    
-    angular.extend($scope, {
+	angular.extend($scope, {
         center: {
             lat: 38.857,
             lng: -107.886,
@@ -18,7 +17,7 @@ angular.module('createmap.controllers', [])
                 },
                 mapbox_terrain: {
                     name: 'Mapbox Terrain',
-                    url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
+                     url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
                     type: 'xyz',
                     layerOptions: {
                         apikey: 'pk.eyJ1IjoidGFzaGE0bSIsImEiOiJHeFpiRVNjIn0.135C1-ww2KNenVJzuEDO_w',
@@ -28,6 +27,8 @@ angular.module('createmap.controllers', [])
             }
         }
     });
+    
+       
     leafletData.getMap().then(function(map){
 
         function testObject(lat, lng, message, marker) {
@@ -82,7 +83,7 @@ angular.module('createmap.controllers', [])
 
         map.on("click", onMapClickMarker);
         addMarkerToMap(testObjects);
-    })
+    });
 
     // Simple POST request example (passing data) :
     /*$http.post('https://rocky-badlands-6969.herokuapp.com/').
@@ -102,7 +103,7 @@ angular.module('createmap.controllers', [])
         // err.status will contain the status code
  })*/
 
-var promise = dataService.getData();
+/*var promise = dataService.getData();
 promise.then(function(result) {
           //alert('Success: ' + result);
           $scope.conditions2 = result;
@@ -110,6 +111,6 @@ promise.then(function(result) {
           //alert('Failed: ' + reason);
        }, function(update) {
           //alert('Got notification: ' + update);
-       });
+       });*/
 
 }])
