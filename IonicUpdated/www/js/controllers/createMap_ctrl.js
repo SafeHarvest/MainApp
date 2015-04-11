@@ -28,6 +28,18 @@ angular.module('createmap.controllers', [])
         }
     });
 	
+	$scope.values = [{
+	  id: 1,
+	  label: 'aLabel',
+	  subItem: { name: 'aSubItem' }
+	}, {
+	  id: 2,
+	  label: 'bLabel',
+	  subItem: { name: 'bSubItem' }
+	}];
+
+	$scope.selected = { name: 'aSubItem' };
+	
   	$scope.changeLat = function(lat){
 		alert(lat);
   	}
@@ -36,6 +48,10 @@ angular.module('createmap.controllers', [])
   	}
   	$scope.changeAddress = function(address){
 		alert(address);
+  	}
+	
+  	$scope.geoLocate = function(){
+		alert("geoLocate");
   	}
   	
 }])
