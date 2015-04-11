@@ -45,10 +45,12 @@ angular.module('createmap.controllers', [])
         new testObject(41.483, -81.662, 'object3', L.marker([]))
         ];
 
-        function onMarkerClick(e){
-            var marker = e.target;
-            $scope.id = marker.objectId;
-        }
+        // function onMarkerClick(e){
+        //     var marker = e.target;
+        //     var latlng = marker.getLatLng();
+        //     $scope.lat = latlng.lat;
+        //     $scope.lng = latlng.lng;
+        // }
 
         function addMarkerToMap(testObjects){
             for(var i = 0; i < testObjects.length; i++){
@@ -70,20 +72,33 @@ angular.module('createmap.controllers', [])
             draggable: true
         });       
 
-        function onMapClickMarker(e){
+        function onDragMarker(e){
+          var latlng = e.target.getLatLng();
+          $scope.lat = latlng.lat.toFixed(4);
+          $scope.lng = latlng.lng.toFixed(4); 
+        }
+
+        function onMapClickAddMarker(e){
             var test = dataService.getData();
             marker.setLatLng(e.latlng)
             .addTo(map);
 
-            $scope.lat = e.latlng.lat;
-            $scope.lng = e.latlng.lng;
+            $scope.lat = e.latlng.lat.toFixed(4);
+            $scope.lng = e.latlng.lng.toFixed(4);
         }
+
 
 
 
         map.on("click", onMapClickMarker);
         addMarkerToMap(testObjects);
     });
+
+        //marker.on('drag', onDragMarker);
+       // map.on("click", onMapClickAddMarker);
+        //addMarkerToMap(testObjects);
+    //})
+
 
     // Simple POST request example (passing data) :
     /*$http.post('https://rocky-badlands-6969.herokuapp.com/').
