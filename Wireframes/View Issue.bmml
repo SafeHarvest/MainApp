@@ -1,6 +1,6 @@
-<mockup version="1.0" skin="sketch" measuredW="1143" measuredH="1258" mockupW="1024" mockupH="1230">
+<mockup version="1.0" skin="sketch" measuredW="727" measuredH="881" mockupW="608" mockupH="853">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="119" y="28" w="1024" h="1230" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="119" y="28" w="608" h="853" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>roundedSolid</borderStyle>
       </controlProperties>
@@ -10,7 +10,7 @@
         <icon>ListIcon%7Clarge</icon>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="236" y="60" w="176" h="30" measuredW="150" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="236" y="60" w="176" h="30" measuredW="135" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <size>20</size>
         <text>Issue%20Types%20%20</text>

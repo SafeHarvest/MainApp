@@ -1,6 +1,6 @@
-<mockup version="1.0" skin="sketch" measuredW="1143" measuredH="1258" mockupW="1024" mockupH="1230">
+<mockup version="1.0" skin="sketch" measuredW="717" measuredH="1258" mockupW="598" mockupH="1230">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="119" y="28" w="1024" h="1230" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="119" y="28" w="598" h="1230" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>roundedSolid</borderStyle>
       </controlProperties>
@@ -10,10 +10,10 @@
         <icon>ListIcon%7Clarge</icon>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="236" y="60" w="176" h="30" measuredW="171" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="236" y="60" w="176" h="30" measuredW="82" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <size>20</size>
-        <text>Create%20Report%20%20%7C%20%20</text>
+        <text>Incident</text>
       </controlProperties>
     </control>
     <control controlID="12" controlTypeID="com.balsamiq.mockups::Map" x="142" y="239" w="527" h="289" measuredW="252" measuredH="222" zOrder="3" locked="false" isInGroup="-1"/>
@@ -69,7 +69,7 @@
     </control>
     <control controlID="25" controlTypeID="com.balsamiq.mockups::FieldSet" x="144" y="536" w="525" h="710" measuredW="200" measuredH="170" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Report%20Info</text>
+        <text>Incident</text>
       </controlProperties>
     </control>
     <control controlID="26" controlTypeID="com.balsamiq.mockups::DateChooser" x="434" y="60" w="-1" h="-1" measuredW="152" measuredH="25" zOrder="15" locked="false" isInGroup="-1">

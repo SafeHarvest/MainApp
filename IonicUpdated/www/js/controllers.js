@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
 	}
 }])
 
-.controller("mapsCtrl", [ "$scope", function($scope) {
+.controller("mapsCtrl", [ "$scope",'$http',function($scope,$http) {
 
 	
     angular.extend($scope, {
@@ -50,6 +50,13 @@ angular.module('starter.controllers', [])
             }
         }
     });
+	
+	$http.get('http://echo.jsontest.com/conditions/frightful').then(function(resp) {
+	    $scope.conditions = resp.data.conditions;
+	  }, function(err) {
+	    console.error('ERR', err);
+	    // err.status will contain the status code
+	  })
 }]).controller('SignInCtrl',['$scope','$state','$timeout',function($scope, $state,$timeout) {
   
   $scope.signIn = function(user) {
