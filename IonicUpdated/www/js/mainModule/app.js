@@ -4,7 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic', 'leaflet-directive','ui.router','starter.controllers'])
+var app = angular.module('starter', ['ionic', 
+'leaflet-directive',
+'ui.router',
+/*'starter.controllers',*/
+'map.controllers',
+'signin.controllers',
+'app.controllers'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
