@@ -10,7 +10,8 @@ var app = angular.module('starter', ['ionic',
 /*'starter.controllers',*/
 'map.controllers',
 'signin.controllers',
-'app.controllers'
+'app.controllers',
+'data.service'
 ])
 
 .run(function($ionicPlatform) {
