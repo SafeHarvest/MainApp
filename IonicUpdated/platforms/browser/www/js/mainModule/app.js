@@ -15,6 +15,9 @@ var app = angular.module('starter', ['ionic',
 'profile.controllers',
 'maps.directives',
 'reports.controllers',
+'map.controllers',
+'savedreport.controllers',
+'savedsearch.controllers',
 'data.service'
 ])
 
@@ -98,6 +101,24 @@ var app = angular.module('starter', ['ionic',
     		     views: {
     		       'menuContent': {
          	     	  	templateUrl: "templates/reports.html",
+    		       }
+    		     }
+   	     
+         	   })
+			   .state('app.savedsearch', {
+         	     url: "/savedsearch",
+    		     views: {
+    		       'menuContent': {
+         	     	  	templateUrl: "templates/savedsearch.html",
+    		       }
+    		     }
+   	     
+         	   })
+			   .state('app.savedreports', {
+         	     url: "/savedreports",
+    		     views: {
+    		       'menuContent': {
+         	     	  	templateUrl: "templates/savedreport.html",
     		       }
     		     }
    	     

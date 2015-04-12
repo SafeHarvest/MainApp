@@ -1,5 +1,5 @@
 <ion-view view-title="Maps">
-  <ion-content>
+  <ion-content  data-tap-disabled="true">
 		<div ng-controller="CreateMapCtrl">
 			
 		
@@ -8,14 +8,14 @@
 			<div class="list .col-50">
 			  <label class="item item-input">
 			      <span class="input-label">Lat</span>
-			      <input ng-model="lat" ng-change="changeLat(lat)" type="text">
+			      <input ng-model="local.data.lat" ng-change="changeLat(local.data.lat)" type="text">
 			   </label>
 			</div>
 			
 			<div class="list  .col-50">
 			  <label class="item item-input">
 			      <span class="input-label">Long</span>
-			      <input ng-model="lng" ng-change="changeLong(lng)" type="text">
+			      <input ng-model="local.data.lng" ng-change="changeLong(local.data.lng)" type="text">
 			   </label>
 			</div>
 		</div><!--row-->
@@ -24,7 +24,7 @@
 		 <div class="list">
 			 <label class="item item-input">
 				 <span class="input-label">Address</span>
-			     <input ng-model="address" ng-change="changeAddress(address)" type="text">
+			     <input ng-model="local.data.address" ng-change="changeAddress(address)" type="text">
 			 </label>
 		 </div>
 		 
@@ -33,59 +33,58 @@
 		  Geo Locate
 		</button>
 		
+		
 		</br> 
   		 <!--<leaflet center="center" markers="markers" layers="layers"></leaflet>-->
-		 <map-dir>error</map-dir>
+		 
+		 <map-dir map-id="'create'" data='local.data'>error</map-dir>
 		 
 		 <div class="list">
-			 
+			  
 		   <label class="item item-input">
-		     <span class="input-label">CropType</span>
-			 <select ng-options="item.subItem as item.label for item in values track by item.id" ng-model="selected">
+		     <span class="input-label">Crop</span>
+			 <select ng-options="key for (key , value) in local.data.crops" ng-model="local.crop"></select>
+		   </label>
+		   
+		   
+		   <label class="item item-input">
+		     <span class="input-label">Season</span>
+			 <select ng-options="item for (key,item) in local.crop.seasons" ng-model="local.season"></select>
 		   </label>
 		   
 		   <label class="item item-input">
-		     <span class="input-label">Crop Season</span>
-		     <input type="text">
-		   </label>
-		   
-		   <label class="item item-input">
-		     <span class="input-label">Acers Affected</span>
-		     <input type="text">
-		   </label>
-		   
-		   <label class="item item-input">
-		     <span class="input-label">Issue</span>
-		     <select ng-options="item.subItem as item.label for item in values track by item.id" ng-model="selected">
+		     <span class="input-label">Pest</span>
+			 {{local.crop.pests}}
+			 <select ng-options="value.name for item in local.crop.pests" ng-model="local.pest"></select>
 		   </label>
 		   
 		   <label class="item item-input">
 		     <span class="input-label">Description</span>
-		     <textbox></textbox>
+		     <textbox ng-model=local.pest.description></textbox>
 		   </label>
 		   
 		   <label class="item item-input">
 		     <span class="input-label">Stage</span>
-		     <textarea></textarea>
+		     <textarea ng-model=local.pest.destuctiveStage></textarea>
 		   </label>
 		   
 		   <label class="item item-input">
 		     <span class="input-label">Symptoms</span>
-		     <textarea></textarea>
+		     <textarea ng-model=local.pest.symptoms></textarea>
 		   </label>
 		   
 		   <label class="item item-input">
 		     <span class="input-label">How to Care</span>
-		     <textarea></textarea>
+		     <textarea  ng-model=local.pest.care></textarea>
 		   </label>
 		   
-   		<button class="button button-stable" ng-click="report()">
-   		  report
-   		</button>
-   		<button class="button button-stable" ng-click="cancel()">
-   		  cancel
-   		</button>
-		 </div>
+   			<button class="button button-stable" ng-click="report()">
+   		  	  report
+   			</button>
+   			<button class="button button-stable" ng-click="cancel()">
+   		  	  cancel
+   			</button>
+		</div>
 		
 	</div>
   </ion-content>
