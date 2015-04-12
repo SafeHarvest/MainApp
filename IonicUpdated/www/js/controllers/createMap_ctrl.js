@@ -2,7 +2,7 @@ angular.module('createmap.controllers', [])
 .controller("CreateMapCtrl", [ "$scope",'$http','dataService', 'leafletData','$timeout',function($scope,$http,dataService, leafletData, $timeout) {
 	$scope.local = {};
 	$scope.loading=undefined;
-	$scope.local.data={lat:null,lng:null};
+	$scope.local.data={lat:null,lng:null,search:'Crop'};
 	
 	$scope.values = [{
 	  id: 1,

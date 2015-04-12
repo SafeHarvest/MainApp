@@ -73,7 +73,7 @@ angular.module('map.controllers', [])
 				$scope.center={
 					lat: parseFloat(data.lat),
 					lng: parseFloat(data.lng),
-					zoom: 8
+					zoom: 10
 				}
 			}
 
@@ -88,6 +88,12 @@ angular.module('map.controllers', [])
 				this.lng = lng;
 				this.incidentId = incidentId;
 			}
+			
+			/*var junkmarker = {
+				lat:"41.4119217",
+				lng:"-81.862382",
+				incidentId:incidentId
+			}*/
 
 			var bounds = args.leafletEvent.target.getBounds();
 
@@ -97,30 +103,47 @@ angular.module('map.controllers', [])
 
 			dataService.getMapData(bounds._northEast.lat, bounds._southWest.lat, bounds._northEast.lng, bounds._southWest.lng)
 			.then(function(data){
-				mapData = data;
+				mapData = data.data;
+				
+				if(mapData){
+					for(var i = 0; i < mapData.length; i++){
+						
+						$scope.markers.push({
+							lat: parseFloat(mapData[i].latitude),
+							lng: parseFloat(mapData[i].longitude),
+							incidentId: mapData[i].incidentId
+						});
+					}
+					
+				}
+
+				$scope.center={
+					lat: "41.4119217",
+					lng: '-81.862382',
+					zoom: 10
+				}
 			});
 
-			if(mapData){
-				for(var i = 0; i < mapData.length; i++){
-					var marker = new marker(parseFloat(mapData[i].lat), parseFLoat(mapData[i].lng), mapData[i].incidentId);
-					$scope.markers.push({
-						lat: parseFloat(marker.lat),
-						lng: parseFloat(marker.lng)
-					});
-				}
-			}
 			
-
-			$scope.center={
-				lat: 42,
-				lng: 81,
-				zoom: 2
-			}
+			
 		});
 
 		$scope.$on('leafletDirectiveMarker.click', function(event, args){
 
-		})
+		});
+		
+		$scope.$on("centerMap",function(event,data){
+			if(angular.isDefined(data.lat) && angular.isDefined(data.lng)){
+
+				$scope.center={
+					lat: parseFloat(data.lat),
+					lng: parseFloat(data.lng),
+					zoom: 10
+				}
+			}
+
+
+		});
 
 
 	}

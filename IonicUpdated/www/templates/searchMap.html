@@ -3,11 +3,11 @@
 		<div ng-controller="SearchMapCtrl">
 		
 			<!--<ion-radio ng-model="local.data" ng-change="onSearch()" ng-value="'other'">Other</ion-radio>-->
-			<ion-radio ng-model="local.data" ng-change="onSearch()" ng-value="'Crop'">Crop</ion-radio>
-			<ion-radio ng-model="local.data" ng-change="onSearch()" ng-value="'insect'">Insect</ion-radio>
-			<ion-radio ng-model="local.data" ng-change="onSearch()" ng-value="'location'">location</ion-radio>
+			<ion-radio ng-model="local.data.search" ng-change="onSearch()" ng-value="'Crop'">Crop</ion-radio>
+			<ion-radio ng-model="local.data.search" ng-change="onSearch()" ng-value="'insect'">Insect</ion-radio>
+			<ion-radio ng-model="local.data.search" ng-change="onSearch()" ng-value="'location'">location</ion-radio>
 			
-	  		<button class="button button-stable" ng-click="geoLocate()">
+	  		<button ng-if="local.data.search=='location'" class="button button-stable" ng-click="geoLocate()">
 	  		  Geo Locate
 	  		</button>
 		
