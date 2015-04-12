@@ -68,9 +68,6 @@ angular.module('map.controllers', [])
 					lat: parseFloat(data.lat),
 					lng: parseFloat(data.lng),
 			    	message: "A Message"
-					lat: data.lat,
-					lng: data.lng,
-					message: "A Message"
 				});
 
 				$scope.center={
