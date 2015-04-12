@@ -1,5 +1,5 @@
 <ion-view view-title="Maps">
-  <ion-content>
+  <ion-content  data-tap-disabled="true">
 		<div ng-controller="CreateMapCtrl">
 			
 		
@@ -8,14 +8,14 @@
 			<div class="list .col-50">
 			  <label class="item item-input">
 			      <span class="input-label">Lat</span>
-			      <input ng-model="local.data.lat" ng-change="changeLat(lat)" type="text">
+			      <input ng-model="local.data.lat" ng-change="changeLat(local.data.lat)" type="text">
 			   </label>
 			</div>
 			
 			<div class="list  .col-50">
 			  <label class="item item-input">
 			      <span class="input-label">Long</span>
-			      <input ng-model="local.data.lng" ng-change="changeLong(lng)" type="text">
+			      <input ng-model="local.data.lng" ng-change="changeLong(local.data.lng)" type="text">
 			   </label>
 			</div>
 		</div><!--row-->
@@ -30,14 +30,14 @@
 		 
 		
 		<button class="button button-stable" ng-click="geoLocate()">
-		  Geo Locate  {{$scope.loading}}
+		  Geo Locate
 		</button>
 		
 		
 		</br> 
   		 <!--<leaflet center="center" markers="markers" layers="layers"></leaflet>-->
 		 
-		 <map-dir map-id="create" data='local.data'>error</map-dir>
+		 <map-dir map-id="'create'" data='local.data'>error</map-dir>
 		 
 		 <div class="list">
 			 

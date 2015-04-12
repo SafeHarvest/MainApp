@@ -3,8 +3,8 @@ angular.module('map.controllers', [])
 	
 	angular.extend($scope, {
 		center: {
-			lat: 38.857,
-			lng: -107.886,
+			lat: 49.34637449999999,
+			lng: -88.70785409999999,
 			zoom: 2
 		},
 		events: {
@@ -34,7 +34,7 @@ angular.module('map.controllers', [])
 		}
 	});
 	
-if($scope.mapId="create"){
+if($scope.mapId==="create"){
 	
 	$scope.$on('leafletDirectiveMap.dblclick', function(event, args){
 		$scope.markers=[];
@@ -50,8 +50,8 @@ if($scope.mapId="create"){
 		});
 	});
 	
-	$scope.$watchCollection('[data.lat,data.lng]', function(data) {
-		if(angular.isDefined(data.lat) && angular.isDefined(data.lng)){
+	/*$scope.$watchCollection('[data.lat,data.lng]', function(data) {
+		if(angular.isDefined(data[0]) && angular.isDefined(data[1])){
 			$scope.markers=[];
 		
 			$scope.markers.push({
@@ -66,11 +66,45 @@ if($scope.mapId="create"){
 				zoom: 8
 			}
 		}
-	},true);
+	},true);*/
+	
+	$scope.$on("addMarker",function(event,data){
+			if(angular.isDefined(data.lat) && angular.isDefined(data.lng)){
+				$scope.markers=[];
+		
+				$scope.markers.push({
+					lat: data.lat,
+					lng: data.lng,
+			    	message: "A Message"
+				});
+			
+				$scope.center={
+					lat: data.lat,
+					lng: data.lng,
+					zoom: 8
+				}
+			}
+
+		
+		});
 }else{
 	
+	$scope.$on('leafletDirectiveMap.load', function(event, args){
+		$scope.markers=[];
+		for(var i = 0 ; i<100; i++){
+			$scope.markers.push({
+				lat: 42+i,
+				lng: 81+i,
+	    		message: "A Message"
+			});
+		}
 	
-	
+		$scope.center={
+			lat: 42,
+			lng: 81,
+			zoom: 2
+		}
+	});
 	
 	
 }
