@@ -24,8 +24,24 @@ angular.module('searchMap.controllers',[])
 		alert(address);
   	}
 	
+	var getLoc = function(){
+	    if (navigator.geolocation) {
+			$scope.loading="We are seraching for your location";
+	        navigator.geolocation.getCurrentPosition(_showPosition);
+	    } else { 
+	        alert("Geolocation is not supported by this browser.");
+	    }
+	}
+
+	var _showPosition = function(position) {
+		$scope.loading=undefined;
+	    $scope.local.data.lat=position.coords.latitude;
+	    $scope.local.data.lng = position.coords.longitude;
+		$scope.$broadcast("centerMap",$scope.local.data);
+	}
+	
   	$scope.geoLocate = function(){
-		alert("geoLocate");
+		getLoc();
   	}
 
 }]);
