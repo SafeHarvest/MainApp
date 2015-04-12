@@ -103,7 +103,10 @@ angular.module('map.controllers', [])
 			if(mapData){
 				for(var i = 0; i < mapData.length; i++){
 					var marker = new marker(parseFloat(mapData[i].lat), parseFLoat(mapData[i].lng), mapData[i].incidentId);
-					$scope.markers.push(marker);
+					$scope.markers.push({
+						lat: parseFloat(marker.lat),
+						lng: parseFloat(marker.lng)
+					});
 				}
 			}
 			
