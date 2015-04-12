@@ -1,5 +1,5 @@
 angular.module('map.controllers', [])
-.controller("MapCtrl", [ "$scope",'$http','dataService', 'leafletData', function($scope,$http,dataService, leafletData) {
+.controller("MapCtrl", [ "$scope",'$http','dataService', 'leafletData','leafletEvents', function($scope,$http,dataService, leafletData,leafletEvents) {
 	
 	angular.extend($scope, {
 		center: {
@@ -9,9 +9,14 @@ angular.module('map.controllers', [])
 		},
 		events: {
 		    map: {
+			  disable : leafletEvents.getAvailableMapEvents(),
 		      enable: ['dblclick', 'drag', 'blur', 'touchstart'],
 		      logic: 'emit'
 		   }
+		},
+	  	
+	    markers : { 
+		enable: ['dblclick', 'drag', 'blur', 'touchstart']
 		},
 		
 		layers: {
@@ -49,24 +54,6 @@ if($scope.mapId==="create"){
 		    message: "A Message"
 		});
 	});
-	
-	/*$scope.$watchCollection('[data.lat,data.lng]', function(data) {
-		if(angular.isDefined(data[0]) && angular.isDefined(data[1])){
-			$scope.markers=[];
-		
-			$scope.markers.push({
-				lat: data[0],
-				lng: data[1],
-		    	message: "A Message"
-			});
-			
-			$scope.center={
-				lat: data[0],
-				lng: data[1],
-				zoom: 8
-			}
-		}
-	},true);*/
 	
 	$scope.$on("addMarker",function(event,data){
 			if(angular.isDefined(data.lat) && angular.isDefined(data.lng)){

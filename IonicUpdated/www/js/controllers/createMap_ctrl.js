@@ -18,6 +18,7 @@ angular.module('createmap.controllers', [])
 	
 	dataService.getData();
 	
+	
   	$scope.changeLat = function(lat){
 		$timeout(function(){
 			if($scope.oldLat==lat)
