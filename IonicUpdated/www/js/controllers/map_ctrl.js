@@ -60,14 +60,14 @@ if($scope.mapId==="create"){
 				$scope.markers=[];
 		
 				$scope.markers.push({
-					lat: data.lat,
-					lng: data.lng,
+					lat: parseFloat(data.lat),
+					lng: parseFloat(data.lng),
 			    	message: "A Message"
 				});
 			
 				$scope.center={
-					lat: data.lat,
-					lng: data.lng,
+					lat: parseFloat(data.lat),
+					lng: parseFloat(data.lng),
 					zoom: 8
 				}
 			}
